@@ -12,7 +12,11 @@ namespace Novi.Art
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
-
+      
+            routes.MapMvcAttributeRoutes(); // Makes it posible to route through attributerouting
+                                            // For example: [Route("Product/List")]
+                                            // public ActionResult List() { ... }
+          
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
