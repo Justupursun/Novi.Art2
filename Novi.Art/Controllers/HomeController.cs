@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Novi.Art.Filters;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -6,6 +7,7 @@ using System.Web.Mvc;
 
 namespace Novi.Art.Controllers
 {
+    [CrawlerFilter]
     public class HomeController : Controller // Inherits from the Controllor-class
     {
         // System.Web.Mvc View --> ViewResult --> ViewResultBase --> ActionResult
