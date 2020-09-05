@@ -25,6 +25,8 @@ namespace Novi.Art.Controllers
                 FormsAuthentication.SetAuthCookie(username, false);                     // Using System.Web.Security
                 return Redirect(FormsAuthentication.GetRedirectUrl(username, false));
             }
+
+            ViewBag.Failed = true;
             return View();
         }
     }
