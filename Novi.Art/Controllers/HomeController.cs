@@ -18,6 +18,7 @@ namespace Novi.Art.Controllers
 
         public ActionResult Index()
         {
+            // throw new System.Exception(); // Throw exception and redirect to the default errorpage (Views/Shared/Error.cshtml) to test customError filter
             return View(); // the return type that is being used for our index method is the ActionResult-class itself.
         }
 

@@ -125,6 +125,7 @@
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Filters\CrawlerFilter.cs" />
+    <Compile Include="Filters\CustomExceptionHandler.cs" />
     <Compile Include="Filters\LogRequestFilter.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -149,12 +150,15 @@
     <Content Include="Content\Images\Products\lovecouple.png" />
     <Content Include="Content\Images\Products\mountains.png" />
     <Content Include="Content\Images\Products\screen.png" />
+    <Content Include="error\404.html" />
+    <Content Include="error\500.html" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="error\Icon" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
