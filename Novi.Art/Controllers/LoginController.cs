@@ -18,16 +18,17 @@ namespace Novi.Art.Controllers
 
         // create a valid login-cookie when login the loginform is summited
         [HttpPost] // this will tell asp.NET MVC 5 to route any post requests to this index route to this specific method
-        public ActionResult Index(string username, string password)
+ //       public ActionResult Index(string username, string password)
+        public ActionResult Index(Models.Login request)
         {
-            if (!string.IsNullOrEmpty(username) && !string.IsNullOrEmpty(password))
+            if (!string.IsNullOrEmpty(request.Username) && !string.IsNullOrEmpty(request.Password))
             {
-                FormsAuthentication.SetAuthCookie(username, false);                     // Using System.Web.Security
-                return Redirect(FormsAuthentication.GetRedirectUrl(username, false));
+                FormsAuthentication.SetAuthCookie(request.Username, false);                     // Using System.Web.Security
+                return Redirect(FormsAuthentication.GetRedirectUrl(request.Username, false));
             }
 
             ViewBag.Failed = true;
-            return View();
+            return View(request);
         }
     }
 }
