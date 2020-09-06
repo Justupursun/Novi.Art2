@@ -1,4 +1,11 @@
-﻿<!DOCTYPE html>
+﻿@helper IconBars(int count) // create a icon menubuttun for mobil versions
+{
+    for (int i = 0; i < count; i++)
+    {
+        <span class="icon-bar"></span>
+    }
+}
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -15,9 +22,7 @@
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+                    @IconBars(3)
                 </button>
                 <a href='@Url.Action("Index", "Home")' class="navbar-brand">
                     <div class="Noviart-logo"></div>
@@ -37,7 +42,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; Novi.Art @DateTime.Now.Year</p>
+            <p>@Html.Copyright()</p>
         </footer>
     </div>
 
