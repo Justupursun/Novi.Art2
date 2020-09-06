@@ -48,6 +48,6 @@
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+    @RenderSection("scripts", required: false) <!-- allows a content page to render some code into the layout page at a location in the layout page other than where the main content is already being rendered by the RenderBody statement.-->
 </body>
 </html>
